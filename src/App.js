@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 // import ProjectTile from './components/ProjectTile';
 import TileArea from './components/TileArea';
@@ -11,6 +12,7 @@ function App() {
       {/* <h1>Good Cause Finder</h1> */}
       <TileArea />
       {/* <ProjectTile /> */}
+      <Footer />
     </div>
   );
 }
