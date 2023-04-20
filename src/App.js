@@ -1,19 +1,34 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 // import ProjectTile from './components/ProjectTile';
 import TileArea from './components/TileArea';
 import 'bootstrap/dist/css/bootstrap.css';
+import HomeArea from './components/HomeArea';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      {/* <h1>Good Cause Finder</h1> */}
-      <TileArea />
-      {/* <ProjectTile /> */}
-      <Footer />
-    </div>
+    // The BrowserRouter component is used to wrap the entire app, so that the routes can be used in all components
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+          <div className="content">
+            <Routes>
+              {/* This route needs to have an exact path, because react matches it to the other routes that just start with a / otherwise */}
+              <Route exact path="/" element={<HomeArea />} />
+
+              <Route path="/filter" element={<TileArea />} />
+                
+              {/* If the route is not found, we can redirect the user to the not found page */}
+              {/* This matches any other route that is note one of the before ones - a catch all route */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

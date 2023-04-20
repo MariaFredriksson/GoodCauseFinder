@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
+import { Link } from 'react-router-dom'
+
 const Navbar = () => {
   return (
     // <div>
@@ -7,15 +9,18 @@ const Navbar = () => {
     // </div>
     <nav className="navbar navbar-expand-lg sticky-top color-1 bg-body-tertiary">
       <div className="container container-fluid">
-        <a className="navbar-brand color-1" href="#">Good Cause Finder</a>
+        {/* The Link makes React handle the routing, and prevents the request to the server for a new page that would have happened otherwise */}
+        <Link className="navbar-brand color-1" to="/">Good Cause Finder</Link>
+
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-link color-1 active" aria-current="page" href="#">Home</a>
-            <a className="nav-link color-1" href="#">Filter projects</a>
-            <a className="nav-link color-1" href="#">About </a>
+            <Link className="nav-link color-1 active" aria-current="page" to="/">Home</Link>
+            <Link className="nav-link color-1" to="/filter">Filter projects</Link>
+            <Link className="nav-link color-1" to="/about">About </Link>
           </div>
         </div>
       </div>
@@ -24,32 +29,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-
-// const Navbar = () => {
-//   return (
-//     <nav className="navbar navbar-expand-lg sticky-top bg-body-tertiary">
-//       <div className="container container-fluid">
-//         <div className="row w-100">
-//           <div className="col-6">
-//             <a className="navbar-brand" href="#">Good Cause Finder</a>
-//           </div>
-//           <div className="col-6 text-end">
-//             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-//               <span className="navbar-toggler-icon"></span>
-//             </button>
-//             <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-//               <div className="navbar-nav">
-//                 <a className="nav-link active" aria-current="page" href="#">Home</a>
-//                 <a className="nav-link" href="#">Features</a>
-//                 <a className="nav-link" href="#">Pricing</a>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </nav>
-//   )
-// }
-
-// export default Navbar;
