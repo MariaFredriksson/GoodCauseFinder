@@ -1,12 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    // <div>
-    //   <h1>Good Cause Finder</h1>
-    // </div>
     <nav className="navbar navbar-expand-lg sticky-top color-1 bg-body-tertiary">
       <div className="container container-fluid">
         {/* The Link makes React handle the routing, and prevents the request to the server for a new page that would have happened otherwise */}

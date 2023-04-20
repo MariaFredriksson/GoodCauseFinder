@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-// import ProjectTile from './components/ProjectTile';
 import TileArea from './components/TileArea';
 import 'bootstrap/dist/css/bootstrap.css';
 import HomeArea from './components/HomeArea';
 import NotFound from './components/NotFound';
+import ProjectArea from './components/ProjectArea';
 
 function App() {
   return (
@@ -20,6 +20,8 @@ function App() {
               <Route exact path="/" element={<HomeArea />} />
 
               <Route path="/filter" element={<TileArea />} />
+
+              <Route path="/project" element={<ProjectArea />} />
                 
               {/* If the route is not found, we can redirect the user to the not found page */}
               {/* This matches any other route that is note one of the before ones - a catch all route */}

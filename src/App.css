@@ -7,3 +7,14 @@
 
   /* color:white !important; */
 }
+
+.tile {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.tile-header:hover {
+  /* color: black !important; */
+  /* When hovering over the text, add underline */
+  text-decoration: underline !important;
+}
