@@ -1,11 +1,18 @@
-import './App.css';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-// import ProjectTile from './components/ProjectTile';
-import TileArea from './components/TileArea';
-import 'bootstrap/dist/css/bootstrap.css';
+/* eslint-disable no-unused-vars */
 
-function App() {
+import './App.css'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+// import ProjectTile from './components/ProjectTile';
+import TileArea from './components/TileArea'
+import 'bootstrap/dist/css/bootstrap.css'
+
+/**
+ * TODO: Add a description of the App component.
+ *
+ * @returns {JSX.Element} The App component.
+ */
+function App () {
   return (
     <div className="App">
       <Navbar />
@@ -14,7 +21,7 @@ function App() {
       {/* <ProjectTile /> */}
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

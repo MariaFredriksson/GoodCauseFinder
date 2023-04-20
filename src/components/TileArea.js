@@ -1,5 +1,10 @@
-import ProjectTile from "./ProjectTile"
+/* eslint-disable no-unused-vars */
 
+import ProjectTile from './ProjectTile'
+
+/**
+ *
+ */
 const TileArea = () => {
   return (
     <div className="container">

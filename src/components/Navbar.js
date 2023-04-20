@@ -1,10 +1,13 @@
 
+/**
+ *
+ */
 const Navbar = () => {
   return (
     // <div>
     //   <h1>Good Cause Finder</h1>
     // </div>
-    <nav className="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg sticky-top bg-body-tertiary color-1">
       <div className="container container-fluid">
         <a className="navbar-brand" href="#">Good Cause Finder</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +26,6 @@ const Navbar = () => {
 }
 
 export default Navbar
-
 
 // const Navbar = () => {
 //   return (
