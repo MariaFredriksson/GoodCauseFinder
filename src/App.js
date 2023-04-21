@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import HomeArea from './components/HomeArea';
 import NotFound from './components/NotFound';
 import ProjectArea from './components/ProjectArea';
+import OrganizationArea from './components/OrganizationArea';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
               <Route path="/filter" element={<TileArea />} />
 
               <Route path="/project" element={<ProjectArea />} />
+
+            <Route path="/organizations" element={<OrganizationArea />} />
                 
               {/* If the route is not found, we can redirect the user to the not found page */}
               {/* This matches any other route that is note one of the before ones - a catch all route */}

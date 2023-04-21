@@ -13,7 +13,7 @@ const Footer = () => {
 
         <div className="nav col-md-4 justify-content-end">
           <NavLink to={"/"} text={"Home"} />
-          <NavLink to={"/filter"} text={"Filter projects"} />
+          <NavLink to={"/organizations"} text={"Organizations"} />
           <NavLink to={"/about"} text={"About"} />
           {/* <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
           <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Features</a></li>
