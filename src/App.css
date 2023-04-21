@@ -1,11 +1,25 @@
 .color-1 {
   /* background-color: #5680E9; */
-  background-color: #84ceeb;
+  /* background-color: #84ceeb; */
   /* background-color: #5ab9ea; */
   /* background-color: #c1c8e4; */
   /* background-color: #8860d0; */
 
   /* color:white !important; */
+}
+
+.home {
+  background-image: url("../public/hand heart.png");
+  background-color: #cccccc;
+  /* Used if the image is unavailable */
+  height: 100vh;
+  /* You must set a specified height */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
 }
 
 .home-image {
