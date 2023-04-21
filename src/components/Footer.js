@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
+import NavLink from "./NavLink"
+
 const Footer = () => {
   return (
     <div className="color-1">
@@ -10,13 +12,16 @@ const Footer = () => {
           <svg className="bi me-2" width="40" height="32"><use href="#bootstrap"></use></svg>
         </a>
 
-        <ul className="nav col-md-4 justify-content-end">
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
+        <div className="nav col-md-4 justify-content-end">
+          <NavLink to={"/"} text={"Home"} />
+          <NavLink to={"/filter"} text={"Filter projects"} />
+          <NavLink to={"/about"} text={"About"} />
+          {/* <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
           <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Features</a></li>
           <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Pricing</a></li>
           <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">FAQs</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">About</a></li>
-        </ul>
+          <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">About</a></li> */}
+        </div>
       </footer>
     </div>
   )
