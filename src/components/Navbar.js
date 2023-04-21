@@ -1,9 +1,10 @@
 
 import { Link } from 'react-router-dom'
+import NavLink from './NavLink'
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg fixed-top color-1 bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg sticky-top color-1 bg-body-tertiary">
       <div className="container container-fluid">
         {/* The Link makes React handle the routing, and prevents the request to the server for a new page that would have happened otherwise */}
         <Link className="navbar-brand color-1" to="/">Good Cause Finder</Link>
@@ -14,9 +15,12 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <Link className="nav-link color-1 active" aria-current="page" to="/">Home</Link>
-            <Link className="nav-link color-1" to="/filter">Filter projects</Link>
-            <Link className="nav-link color-1" to="/about">About </Link>
+            <NavLink to={"/"} text={"Home"} />
+            <NavLink to={"/filter"} text={"Filter projects"} />
+            <NavLink to={"/about"} text={"About"} />
+            {/* <Link className="nav-link color-1 active" aria-current="page" to="/">Home</Link> */}
+            {/* <Link className="nav-link color-1" to="/filter">Filter projects</Link> */}
+            {/* <Link className="nav-link color-1" to="/about">About </Link> */}
           </div>
         </div>
       </div>
