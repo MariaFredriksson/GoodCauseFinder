@@ -28,7 +28,8 @@ function App() {
 
               <Route path="/organizations" element={<OrganizationArea />} />
 
-              <Route path="/organization" element={<Organization />} />
+              {/* <Route path="/organization" element={<Organization />} /> */}
+              <Route path="/organization/:id" element={<Organization />} />
                 
               {/* If the route is not found, we can redirect the user to the not found page */}
               {/* This matches any other route that is note one of the before ones - a catch all route */}

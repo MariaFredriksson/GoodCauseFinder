@@ -4,10 +4,9 @@ const OrganizationArea = () => {
   return (
     <div className="container">
       <h2>Organizations</h2>
-      <OrganizationTile />
-      <OrganizationTile />
-      <OrganizationTile />
-      {/* // TODO: Make tiles/cards for each organization.  */}
+      <OrganizationTile id={"1"} />
+      <OrganizationTile id={"2"} />
+      <OrganizationTile id={"3"} />
     </div>
   )
 }
