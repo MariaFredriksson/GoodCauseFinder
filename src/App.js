@@ -23,7 +23,8 @@ function App() {
 
               <Route path="/filter" element={<TileArea />} />
 
-              <Route path="/project" element={<Project />} />
+              {/* <Route path="/project" element={<Project />} /> */}
+              <Route path="/project/:id" element={<Project />} />
 
               <Route path="/organizations" element={<OrganizationArea />} />
 
