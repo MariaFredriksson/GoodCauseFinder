@@ -12,6 +12,14 @@
   /* color: #5D2E5F !important; */
 }
 
+/* .App {
+  min-height: 100vh;
+} */
+
+/* .content {
+  min-height: 80vh;
+} */
+
 .home {
   background-image: url("../public/hand heart.png");
   background-color: #cccccc;
@@ -29,6 +37,13 @@
 .home-image {
   opacity: 0.7;
 }
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+} */
 
 .tile {
   text-decoration: none !important;

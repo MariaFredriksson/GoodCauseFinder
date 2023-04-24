@@ -3,7 +3,7 @@ import NavLink from "./NavLink"
 
 const Footer = () => {
   return (
-    <div className="color-1">
+    <div className="footer color-1">
       <footer className="container d-flex flex-wrap justify-content-between align-items-center py-3">
         <p className="col-md-4 mb-0 text-body-secondary">© 2023 Company, Inc</p>
 
@@ -15,11 +15,6 @@ const Footer = () => {
           <NavLink to={"/"} text={"Home"} />
           <NavLink to={"/organizations"} text={"Organizations"} />
           <NavLink to={"/about"} text={"About"} />
-          {/* <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Features</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Pricing</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">FAQs</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">About</a></li> */}
         </div>
       </footer>
     </div>
