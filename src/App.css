@@ -40,3 +40,13 @@
   /* When hovering over the text, add underline */
   text-decoration: underline !important;
 }
+
+/* .organization-tile {
+  justify-content: center;
+  align-items: center;
+} */
+
+.organization-card {
+  max-width: 900px;
+  margin: auto;
+}
