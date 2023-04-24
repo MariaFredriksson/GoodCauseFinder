@@ -1,6 +1,6 @@
 import Button from "./Button"
 
-const ProjectArea = () => {
+const Project = () => {
   return (
     <div className="container text-center">
       <h2>Project title</h2>
@@ -15,4 +15,4 @@ const ProjectArea = () => {
   )
 }
 
-export default ProjectArea
+export default Project

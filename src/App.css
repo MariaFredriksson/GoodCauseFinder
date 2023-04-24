@@ -50,3 +50,7 @@
   max-width: 900px;
   margin: auto;
 }
+
+.organization-logo {
+  max-height: 200px;
+}
