@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom"
 
-const Button = ({ text }) => {
+const Button = ({ text, link }) => {
   return (
     <div>
-      <button type="button" className="btn btn-lg color-1 m-4 px-4">{text}</button>
+      <Link to={link}>
+        <button type="button" className="btn btn-lg color-1 my-4 px-4">{text}</button>
+      </Link>
     </div>
   )
 }

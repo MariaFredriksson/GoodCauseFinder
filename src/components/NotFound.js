@@ -10,7 +10,7 @@ const NotFound = () => {
           <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">The page could not be found...</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <Button text={"Home, maybe"} />
+              <Button link={"/"} text={"Home, maybe"} />
             </div>
           </div>
         </div>
