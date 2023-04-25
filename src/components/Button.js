@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom"
 
 const Button = ({ text, link }) => {
@@ -8,6 +9,11 @@ const Button = ({ text, link }) => {
       </Link>
     </div>
   )
+}
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 }
 
 export default Button

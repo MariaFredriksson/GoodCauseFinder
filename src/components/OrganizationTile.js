@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom"
 
 const OrganizationTile = ({ id }) => {
@@ -22,5 +23,12 @@ const OrganizationTile = ({ id }) => {
     </div>
   )
 }
+
+// This is a way to make sure that the component is receiving the right type of props
+// If the wrong type of props is passed, the console will show an error
+// This prop is required and must be a number
+OrganizationTile.propTypes = {
+  id: PropTypes.number.isRequired,
+};
 
 export default OrganizationTile
