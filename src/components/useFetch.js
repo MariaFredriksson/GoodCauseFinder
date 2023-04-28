@@ -1,17 +1,24 @@
-import { useState } from "react"
-
-import { useEffect } from "react";
+import { useState, useEffect } from "react"
 
 const useFetch = (url) => {
   const [data, setData] = useState(null)
 
+  // The useEffect hook runs every time the component renders
   useEffect(() => {
     fetch(url)
       .then(res => {
+         // If the response is not ok, throw an error
+        if (!res.ok) {
+          throw Error('Could not fetch the data for that resource');
+        }
         // console.log(res)
         // console.log(res.json());
+
+        // Returns another promise
+        // This parses the json into a javascript object
         return res.json()
       })
+      // This takes in the data that comes from the previous then method - res.json()
       .then(data => {
         setData(data)
       })

@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import Button from "./Button"
-import useFetch from "./useFetch";
+// import useFetch from "./useFetch";
 
 const Project = () => {
   // Allows us to get the parameter from the route (and here we want to get the parameter that we named id)
   const { id } = useParams()
 
-  const tryFetch = useFetch('http://localhost:5080')
+  // const tryFetch = useFetch('http://localhost:5080')
 
-  console.log(tryFetch.data)
+  // console.log(tryFetch.data)
 
   return (
     <div className="container text-center">
@@ -16,7 +16,8 @@ const Project = () => {
       <img src="../give-love.png" alt="Give love" />
       <p>Organization {id}</p>
 
-      {tryFetch.data && <p>{tryFetch.data.blogs[0].title}</p>}
+      {/* Conditional rendering, so this p-tag only shows when the fetch is done and there are some values */}
+      {/* {tryFetch.data && <p>{tryFetch.data.blogs[0].title}</p>} */}
 
       <div>Project Description {id} - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eligendi iusto minus ipsam laborum sapiente impedit soluta commodi eum veniam, explicabo sit eos animi excepturi assumenda accusantium dolores aspernatur doloremque!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eligendi iusto minus ipsam laborum sapiente impedit soluta commodi eum veniam, explicabo sit eos animi excepturi assumenda accusantium dolores aspernatur doloremque!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eligendi iusto minus ipsam laborum sapiente impedit soluta commodi eum veniam, explicabo sit eos animi excepturi assumenda accusantium dolores aspernatur doloremque!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eligendi iusto minus ipsam laborum sapiente impedit soluta commodi eum veniam, explicabo sit eos animi excepturi assumenda accusantium dolores aspernatur doloremque!</div>
 
