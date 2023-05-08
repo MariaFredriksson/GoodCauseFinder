@@ -12,12 +12,14 @@
   /* color: #5D2E5F !important; */
 }
 
+/* // Funkar för att få footern längst ner, men då blir både header och footer väldigt höga */
 /* .App {
   min-height: 100vh;
-} */
+  display: grid;
+}
 
-/* .content {
-  min-height: 80vh;
+.content {
+  height: 100% !important;
 } */
 
 .home {
@@ -52,6 +54,8 @@
 .tile {
   text-decoration: none !important;
   color: black !important;
+  height: 100% !important;
+  display: grid;
 }
 
 .tile-header:hover {
