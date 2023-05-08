@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import TileArea from './components/TileArea';
+import TileArea from './components/ProjectArea';
 import 'bootstrap/dist/css/bootstrap.css';
 import HomeArea from './components/HomeArea';
 import NotFound from './components/NotFound';

@@ -16,12 +16,6 @@ const TileArea = () => {
         {data && data.projects.map(project => (
           <ProjectTile key={project.id} project={project} />
         ))}
-
-        {/* <ProjectTile id={1} />
-        <ProjectTile id={2} />
-        <ProjectTile id={3} />
-        <ProjectTile id={4} />
-        <ProjectTile id={5} /> */}
       </div>
     </div>
   )
