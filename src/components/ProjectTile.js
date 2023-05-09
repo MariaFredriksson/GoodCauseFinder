@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const ProjectTile = ({ project }) => {
   return (
     <div>
-      <div className="col">
+      <div className="col h-100">
         <Link to={`/project/${project.id}`} className="tile">
           <div className="card">
             <img src="./give-love.png" className="card-img-top" alt="Give love icon" />
