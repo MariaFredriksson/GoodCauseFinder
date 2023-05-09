@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import TileArea from './components/TileArea';
+import ProjectArea from './components/ProjectArea';
 import 'bootstrap/dist/css/bootstrap.css';
 import HomeArea from './components/HomeArea';
 import NotFound from './components/NotFound';
@@ -21,7 +21,7 @@ function App() {
               {/* This route needs to have an exact path, because react matches it to the other routes that just start with a / otherwise */}
               <Route exact path="/" element={<HomeArea />} />
 
-              <Route path="/filter" element={<TileArea />} />
+              <Route path="/filter" element={<ProjectArea />} />
 
               {/* <Route path="/project" element={<Project />} /> */}
               <Route path="/project/:id" element={<Project />} />

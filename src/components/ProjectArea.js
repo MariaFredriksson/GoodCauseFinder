@@ -1,7 +1,7 @@
 import ProjectTile from "./ProjectTile"
 import useFetch from "./useFetch"
 
-const TileArea = () => {
+const ProjectArea = () => {
   // Get the data about the projects
   const { data } = useFetch('http://localhost:5080/projects')
 
@@ -27,4 +27,4 @@ const TileArea = () => {
   )
 }
 
-export default TileArea
+export default ProjectArea
