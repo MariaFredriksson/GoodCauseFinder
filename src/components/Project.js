@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Button from "./Button"
 import useFetch from "./useFetch";
+// import { useNavigate } from "react-router-dom/dist";
 
 const Project = () => {
   // Allows us to get the parameter from the route (and here we want to get the parameter that we named id)
@@ -11,18 +12,30 @@ const Project = () => {
 
   console.log(data);
 
+  // const navigate = useNavigate();
+
   return (
-    <div className="container text-center">
+    <div className="container">
 
-      {data && <h2>{data.title}</h2>}
+      {/* // TODO: Fix this later */}
+      {/* Back button - doesn't work yet */}
+      {/* <Button link={() => navigate(-1)} text={" < "} /> */}
 
-      <img src="../give-love.png" alt="Give love" />
+      <Button link="/projects" text={" < "} />
 
-      {data && <p>{data.organization}</p>}
+      <div className="text-center">
+  
+        {data && <h2>{data.title}</h2>}
+  
+        <img src="../give-love.png" alt="Give love" />
+  
+        {data && <p>{data.organization}</p>}
+  
+        {data && <div>{data.description}</div>}
+  
+        <Button link="#" text={"Support this project"} />
+      </div>
 
-      {data && <div>{data.description}</div>}
-
-      <Button link="#" text={"Support this project"} />
     </div>
   )
 }

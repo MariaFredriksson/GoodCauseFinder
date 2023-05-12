@@ -23,12 +23,10 @@ function App() {
 
               <Route path="/projects" element={<ProjectArea />} />
 
-              {/* <Route path="/project" element={<Project />} /> */}
               <Route path="/projects/:id" element={<Project />} />
 
               <Route path="/organizations" element={<OrganizationArea />} />
 
-              {/* <Route path="/organization" element={<Organization />} /> */}
               <Route path="/organizations/:id" element={<Organization />} />
                 
               {/* If the route is not found, we can redirect the user to the not found page */}
