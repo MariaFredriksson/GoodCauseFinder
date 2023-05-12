@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <NavLink to={"/"} text={"Home"} />
-            <NavLink to={"/filter"} text={"Filter projects"} />
+            <NavLink to={"/projects"} text={"Filter projects"} />
             <NavLink to={"/about"} text={"About"} />
             {/* <Link className="nav-link color-1 active" aria-current="page" to="/">Home</Link> */}
             {/* <Link className="nav-link color-1" to="/filter">Filter projects</Link> */}

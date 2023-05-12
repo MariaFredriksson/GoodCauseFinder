@@ -5,7 +5,7 @@ const OrganizationTile = ({ id }) => {
   return (
     <div className="organization-tile">
       <div className="card mb-3 organization-card p-3">
-        <Link to={`/organization/${id}`} className="tile">
+        <Link to={`/organizations/${id}`} className="tile">
           <div className="row g-0">
             <div className="col-md-4">
               <img src="./give-love.png" className="card-img-top" alt="Give love icon" />

@@ -5,7 +5,7 @@ const ProjectTile = ({ project }) => {
   return (
     <div>
       <div className="col h-100">
-        <Link to={`/project/${project.id}`} className="tile">
+        <Link to={`/projects/${project.id}`} className="tile">
           <div className="card">
             <img src="./give-love.png" className="card-img-top" alt="Give love icon" />
               <div className="card-body">
