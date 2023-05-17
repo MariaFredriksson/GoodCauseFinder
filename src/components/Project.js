@@ -27,13 +27,13 @@ const Project = () => {
   
         {data && <h2>{data.title}</h2>}
   
-        <img src="../give-love.png" alt="Give love" />
+        {data && <img src={data.imgURL} alt="Give love" />}
   
         {data && <p>{data.organization}</p>}
   
-        {data && <div>{data.description}</div>}
+        {data && <div>{data.text}</div>}
   
-        <Button link="#" text={"Support this project"} />
+        {data && <Button link={data.articleURL} text={"Support this project"} />}
       </div>
 
     </div>
