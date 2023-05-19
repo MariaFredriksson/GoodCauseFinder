@@ -2,15 +2,23 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom"
 
 const ProjectTile = ({ project }) => {
+  // Truncate the text to a certain number of characters
+  const characterLimit = 150
+  const truncatedText = project.text.substring(0, characterLimit)
+
   return (
     <div>
       <div className="col h-100">
         <Link to={`/projects/${project.id}`} className="tile">
           <div className="card">
             <img src={project.imgURL} className="card-img-top" alt={project.title} />
-              <div className="card-body">
+              <div className="card-body d-flex flex-column">
                 <h5 className="card-title tile-header">{project.title}</h5>
-                <p className="card-text">{project.text}</p>
+                <p className="card-text flex-grow-1 overflow-hidden">
+                  {truncatedText}
+                  {/* Show ellipsis if the text exceeds the character limit */}
+                  {project.text.length > characterLimit && '...'} 
+                </p>
               </div>
               <div className="card-footer">
                 <small className="text-body-secondary">{project.organization}</small>
