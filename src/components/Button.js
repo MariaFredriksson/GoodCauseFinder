@@ -13,7 +13,7 @@ const Button = ({ text, link }) => {
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
 }
 
 export default Button
