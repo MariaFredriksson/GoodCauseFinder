@@ -1,12 +1,15 @@
-import { useState } from "react";
+// import { useState } from "react";
 // import Filter from "./Filter"
 import ProjectTile from "./ProjectTile"
 import useFetch from "./useFetch"
 // import Button from "./Button";
 import FilterButton from "./FilterButton";
+import { useContext } from "react";
+import { CategoryContext } from "./CategoryContext";
 
 const ProjectArea = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const { selectedCategory, setSelectedCategory } = useContext(CategoryContext)
+
   // Get the data about the projects
   const { data } = useFetch('http://localhost:5080/projects')
 
@@ -14,15 +17,15 @@ const ProjectArea = () => {
 
   const handleCategoryFilter = (category) => {
     console.log('handleCategoryFilter ' + category)
-    setSelectedCategory(category);
-  };
+    setSelectedCategory(category)
+  }
 
   const filteredProjects = data?.projects.filter((project) => {
     if (!selectedCategory) {
-      return true;
+      return true
     }
-    return project.category.includes(selectedCategory);
-  });
+    return project.category.includes(selectedCategory)
+  })
 
   return (
     <div className="container">
@@ -49,19 +52,19 @@ const ProjectArea = () => {
           isActive={selectedCategory === "utbildning"}
         />
       </div>
-      {/* Conditional rendering, so these tiles only shows when the fetch is done and there are some values */}
-      {/* Loop though the projects array and send the data to each tile */}
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 my-4">
+        {/* Conditional rendering, so these tiles only shows when the fetch is done and there are some values */}
+        {/* Loop though the projects array and send the data to each tile */}
         {filteredProjects &&
           filteredProjects.map((project) => (
             <ProjectTile key={project.id} project={project} />
           ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectArea;
+export default ProjectArea
 
 //   return (
 //     <div className="container">

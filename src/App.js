@@ -9,6 +9,7 @@ import NotFound from './components/NotFound';
 import Project from './components/Project';
 import OrganizationArea from './components/OrganizationArea';
 import Organization from './components/Organization';
+import { CategoryContext } from './components/CategoryContext';
 
 function App() {
   return (
@@ -17,22 +18,20 @@ function App() {
       <div className="App">
         <Navbar />
         <div className="content">
-          <Routes>
-            {/* This route needs to have an exact path, because react matches it to the other routes that just start with a / otherwise */}
-            <Route exact path="/" element={<HomeArea />} />
-
-            <Route path="/projects" element={<ProjectArea />} />
-
-            <Route path="/projects/:id" element={<Project />} />
-
-            <Route path="/organizations" element={<OrganizationArea />} />
-
-            <Route path="/organizations/:id" element={<Organization />} />
-              
-            {/* If the route is not found, we can redirect the user to the not found page */}
-            {/* This matches any other route that is note one of the before ones - a catch all route */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <CategoryContext>
+            <Routes>
+              {/* This route needs to have an exact path, because react matches it to the other routes that just start with a / otherwise */}
+              <Route exact path="/" element={<HomeArea />} />
+              <Route path="/projects" element={<ProjectArea />} />
+              <Route path="/projects/:id" element={<Project />} />
+              <Route path="/organizations" element={<OrganizationArea />} />
+              <Route path="/organizations/:id" element={<Organization />} />
+            
+              {/* If the route is not found, we can redirect the user to the not found page */}
+              {/* This matches any other route that is note one of the before ones - a catch all route */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </CategoryContext>
         </div>
         <Footer />
       </div>
