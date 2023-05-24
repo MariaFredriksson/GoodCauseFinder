@@ -12,6 +12,19 @@
   /* color: #5D2E5F !important; */
 }
 
+.color-2 {
+  /* background-color: #84ceeb; */
+  /* background-color: #5ab9ea; */
+  /* background-color: #c1c8e4; */
+  /* background-color: #8860d0; */
+
+  background-color: #2e595f !important;
+
+  color:white !important;
+
+  /* color: #5D2E5F !important; */
+}
+
 /* // Funkar för att få footern längst ner, men då blir både header och footer väldigt höga */
 .App {
   display: grid;
