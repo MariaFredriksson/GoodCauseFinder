@@ -2,7 +2,8 @@ import { useState } from "react";
 // import Filter from "./Filter"
 import ProjectTile from "./ProjectTile"
 import useFetch from "./useFetch"
-import Button from "./Button";
+// import Button from "./Button";
+import FilterButton from "./FilterButton";
 
 const ProjectArea = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -12,7 +13,7 @@ const ProjectArea = () => {
   console.log(data)
 
   const handleCategoryFilter = (category) => {
-    console.log('handleCategoryFilter')
+    console.log('handleCategoryFilter ' + category)
     setSelectedCategory(category);
   };
 
@@ -25,23 +26,27 @@ const ProjectArea = () => {
 
   return (
     <div className="container">
-      <div>
-        <h2>Filtrera projekt</h2>
-        <Button
+      <h2>Filtrera projekt</h2>
+      <div className="mb-4 d-flex flex-wrap">
+        <FilterButton
           onClick={() => handleCategoryFilter(null)}
           text="Alla projekt"
+          isActive={selectedCategory === null}
         />
-        <Button
+        <FilterButton
           onClick={() => handleCategoryFilter("hälsa")}
           text="Hälsa"
+          isActive={selectedCategory === "hälsa"}
         />
-        <Button
+        <FilterButton
           onClick={() => handleCategoryFilter("jämställdhet")}
           text="Jämställdhet"
+          isActive={selectedCategory === "jämställdhet"}
         />
-        <Button
+        <FilterButton
           onClick={() => handleCategoryFilter("utbildning")}
           text="Utbildning"
+          isActive={selectedCategory === "utbildning"}
         />
       </div>
       {/* Conditional rendering, so these tiles only shows when the fetch is done and there are some values */}
