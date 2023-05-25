@@ -1,28 +1,46 @@
-import { useState } from "react";
+import { useState } from "react"
+// import { useHistory, useLocation } from 'react-router-dom'
 // import Filter from "./Filter"
 import ProjectTile from "./ProjectTile"
 import useFetch from "./useFetch"
 // import Button from "./Button";
-import FilterButton from "./FilterButton";
+import FilterButton from "./FilterButton"
+import { useLocation, useNavigate } from "react-router-dom"
 
 const ProjectArea = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null)
   // Get the data about the projects
   const { data } = useFetch('http://localhost:5080/projects')
 
   console.log(data)
+  console.log(selectedCategory)
+
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const handleCategoryFilter = (category) => {
     console.log('handleCategoryFilter ' + category)
-    setSelectedCategory(category);
-  };
+    setSelectedCategory(category)
+
+    // Sets the query string portion of the current URL
+    // Like in http://example.com/projects?category=hälsa it is the part with the ? and after
+    const searchParams = new URLSearchParams(location.search)
+    console.log('Location Search:', location.search)
+    // Sets the value of category 
+    searchParams.set('category', category)
+    // Updates the url in the browser and navigates to it
+    navigate(`?${searchParams.toString()}`, { replace: true })
+  }
+
+  const urlSearchParams = new URLSearchParams(location.search)
+  const selectedCategoryFromUrl = urlSearchParams.get('category')
 
   const filteredProjects = data?.projects.filter((project) => {
-    if (!selectedCategory) {
-      return true;
+    if (!selectedCategoryFromUrl) {
+      return true
     }
-    return project.category.includes(selectedCategory);
-  });
+    return project.category.includes(selectedCategoryFromUrl)
+  })
 
   return (
     <div className="container">
@@ -31,22 +49,22 @@ const ProjectArea = () => {
         <FilterButton
           onClick={() => handleCategoryFilter(null)}
           text="Alla projekt"
-          isActive={selectedCategory === null}
+          isActive={!selectedCategoryFromUrl}
         />
         <FilterButton
           onClick={() => handleCategoryFilter("hälsa")}
           text="Hälsa"
-          isActive={selectedCategory === "hälsa"}
+          isActive={selectedCategoryFromUrl === "hälsa"}
         />
         <FilterButton
           onClick={() => handleCategoryFilter("jämställdhet")}
           text="Jämställdhet"
-          isActive={selectedCategory === "jämställdhet"}
+          isActive={selectedCategoryFromUrl === "jämställdhet"}
         />
         <FilterButton
           onClick={() => handleCategoryFilter("utbildning")}
           text="Utbildning"
-          isActive={selectedCategory === "utbildning"}
+          isActive={selectedCategoryFromUrl === "utbildning"}
         />
       </div>
       {/* Conditional rendering, so these tiles only shows when the fetch is done and there are some values */}
@@ -58,10 +76,10 @@ const ProjectArea = () => {
           ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectArea;
+export default ProjectArea
 
 //   return (
 //     <div className="container">
