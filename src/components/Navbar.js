@@ -13,6 +13,10 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* // TODO: Gör något liknande detta för när hamburger menyn inte är collapsed
+         // If the button is active, change the color of the button
+        className={`btn btn-lg color-1 my-4 px-4 ${isActive ? 'color-2' : ''}`}  */}
+
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <NavLink to={"/"} text={"Hem"} />

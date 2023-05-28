@@ -4,6 +4,7 @@ const HomeArea = () => {
   return (
     <div className="home">
       <div className="container">
+        {/* // TODO: Fixa så att denna div går att ta bort utan att bakgrundsbilden inte går upp hela vägen till navbaren */}
         <div>
           <p>.</p>
         </div>
