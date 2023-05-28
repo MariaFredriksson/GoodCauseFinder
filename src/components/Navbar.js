@@ -4,7 +4,7 @@ import NavLink from './NavLink'
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg sticky-top color-1 bg-body-tertiary">
+    <nav className="navbar navbar-expand-md sticky-top color-1 bg-body-tertiary">
       <div className="container container-fluid">
         {/* The Link makes React handle the routing, and prevents the request to the server for a new page that would have happened otherwise */}
         <Link className="navbar-brand color-1" to="/">Good Cause Finder</Link>

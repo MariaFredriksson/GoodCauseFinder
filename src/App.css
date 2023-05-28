@@ -25,7 +25,6 @@
   /* color: #5D2E5F !important; */
 }
 
-/* // Funkar för att få footern längst ner, men då blir både header och footer väldigt höga */
 .App {
   display: grid;
 }
@@ -37,6 +36,23 @@
 .content {
   min-height: 86vh;
 }
+
+.navbar-toggler {
+  border: none !important;
+  /* color: white !important; */
+  filter: invert(100%) !important;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* .navbar-toggler-icon { */
+  /* color: white !important; */
+  /* background-color: white !important; */
+  /* filter: invert(100%) !important; */
+/* } */
 
 .home {
   background-image: url("../public/hand heart.png");
