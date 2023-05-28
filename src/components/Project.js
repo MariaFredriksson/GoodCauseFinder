@@ -1,7 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
 import Button from "./Button"
-import useFetch from "./useFetch";
-// import { useNavigate } from "react-router-dom/dist";
+import useFetch from "./useFetch"
 
 const Project = () => {
   // Allows us to get the parameter from the route (and here we want to get the parameter that we named id)
@@ -17,7 +16,7 @@ const Project = () => {
     console.log(error)
   }
 
-  // const navigate = useNavigate();
+  // const navigate = useNavigate()
 
   return (
     <div className="container">
