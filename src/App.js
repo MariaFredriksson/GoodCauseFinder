@@ -1,14 +1,14 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import ProjectArea from './components/ProjectArea';
-import 'bootstrap/dist/css/bootstrap.css';
-import HomeArea from './components/HomeArea';
-import NotFound from './components/NotFound';
-import Project from './components/Project';
-import OrganizationArea from './components/OrganizationArea';
-import Organization from './components/Organization';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import ProjectArea from './components/ProjectArea'
+import 'bootstrap/dist/css/bootstrap.css'
+import HomeArea from './components/HomeArea'
+import NotFound from './components/NotFound'
+import Project from './components/Project'
+import OrganizationArea from './components/OrganizationArea'
+import Organization from './components/Organization'
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

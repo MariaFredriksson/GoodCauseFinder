@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"
 
 const ProjectTile = ({ project }) => {
-  // Truncate the text to a certain number of characters
+  // Truncate the text to a certain number of characters, and thereby limit the height of the tile
   const characterLimit = 150
   const truncatedText = project.text.substring(0, characterLimit)
 
@@ -16,7 +16,7 @@ const ProjectTile = ({ project }) => {
                 <h5 className="card-title tile-header">{project.title}</h5>
                 <p className="card-text flex-grow-1 overflow-hidden">
                   {truncatedText}
-                  {/* Show ellipsis if the text exceeds the character limit */}
+                  {/* Show ... if the text exceeds the character limit */}
                   {project.text.length > characterLimit && '...'} 
                 </p>
               </div>
@@ -35,6 +35,6 @@ const ProjectTile = ({ project }) => {
 // This prop is required and must be an object
 ProjectTile.propTypes = {
   project: PropTypes.object.isRequired,
-};
+}
 
 export default ProjectTile

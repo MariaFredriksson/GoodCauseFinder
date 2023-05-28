@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
 import Button from "./Button"
 
 const Organization = () => {
   // Allows us to get the parameter from the route (and here we want to get the parameter that we named id)
-  const { id } = useParams();
+  const { id } = useParams()
 
   return (
     <div>

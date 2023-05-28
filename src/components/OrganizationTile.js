@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"
 
 const OrganizationTile = ({ id }) => {
@@ -29,6 +29,6 @@ const OrganizationTile = ({ id }) => {
 // This prop is required and must be a number
 OrganizationTile.propTypes = {
   id: PropTypes.number.isRequired,
-};
+}
 
 export default OrganizationTile
