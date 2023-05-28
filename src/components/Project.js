@@ -8,9 +8,14 @@ const Project = () => {
   const { id } = useParams()
 
   // Get the data about the project
-  const { data } = useFetch(`http://localhost:5080/projects/${id}`)
+  const { data, error } = useFetch(`http://localhost:5080/projects/${id}`)
 
-  console.log(data);
+  console.log(data)
+
+  // If there is an error, log it to the console
+  if (error) {
+    console.log(error)
+  }
 
   // const navigate = useNavigate();
 
@@ -24,6 +29,9 @@ const Project = () => {
       <Button link="/projects" text={" < "} />
 
       <div className="text-center">
+
+        {/* If there is an error, display an error message */}
+        {error && <p>Oups... Något gick fel... Försök igen senare.</p>}
   
         {data && <h2>{data.title}</h2>}
   

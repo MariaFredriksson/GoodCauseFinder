@@ -8,9 +8,14 @@ import FilterButton from "./FilterButton";
 const ProjectArea = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   // Get the data about the projects
-  const { data } = useFetch('http://localhost:5080/projects')
+  const { data, error } = useFetch('http://localhost:5080/projects')
 
   console.log(data)
+
+  // If there is an error, log it to the console
+  if (error) {
+    console.log(error)
+  }
 
   const handleCategoryFilter = (category) => {
     console.log('handleCategoryFilter ' + category)
@@ -49,11 +54,14 @@ const ProjectArea = () => {
           isActive={selectedCategory === "utbildning"}
         />
       </div>
+
+      {/* If there is an error, display an error message */}
+      {error && <p>Oups... Något gick fel... Försök igen senare.</p>}
+
       {/* Conditional rendering, so these tiles only shows when the fetch is done and there are some values */}
       {/* Loop though the projects array and send the data to each tile */}
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 my-4">
-        {filteredProjects &&
-          filteredProjects.map((project) => (
+        {filteredProjects && filteredProjects.map((project) => (
             <ProjectTile key={project.id} project={project} />
           ))}
       </div>
