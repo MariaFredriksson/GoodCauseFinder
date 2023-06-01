@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"
+import GiveLoveIcon from "./../assets/give-love.png"
 
 const OrganizationTile = ({ id }) => {
   return (
@@ -8,7 +9,7 @@ const OrganizationTile = ({ id }) => {
         <Link to={`/organizations/${id}`} className="tile">
           <div className="row g-0">
             <div className="col-md-4">
-              <img src="./give-love.png" className="card-img-top" alt="Give love icon" />
+              <img src={GiveLoveIcon} className="card-img-top" alt="Give love icon" />
             </div>
             <div className="col-md-8">
               <div className="card-body">

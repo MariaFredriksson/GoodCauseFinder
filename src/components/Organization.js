@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import Button from "./Button"
+import GiveLoveIcon from "./../assets/give-love.png"
 
 const Organization = () => {
   // Allows us to get the parameter from the route (and here we want to get the parameter that we named id)
@@ -8,7 +9,7 @@ const Organization = () => {
   return (
     <div>
       <div className="container">
-        <img src="../give-love.png" alt="Give love" className="organization-logo my-4" />
+        <img src={GiveLoveIcon} alt="Give love" className="organization-logo my-4" />
 
         <h2>Organization {id}</h2>
 

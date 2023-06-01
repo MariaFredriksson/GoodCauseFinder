@@ -6,7 +6,7 @@ import FilterButton from "./FilterButton"
 const ProjectArea = () => {
   const [selectedCategory, setSelectedCategory] = useState(null)
   // Get the data about the projects
-  const { data, error } = useFetch('http://localhost:5080/projects')
+  const { data, error } = useFetch('https://cscloud7-221.lnu.se/good-cause-finder-server/projects')
 
   console.log(data)
 

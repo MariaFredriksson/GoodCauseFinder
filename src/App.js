@@ -13,7 +13,7 @@ import Organization from './components/Organization'
 function App() {
   return (
     // The BrowserRouter component is used to wrap the entire app, so that the routes can be used in all components
-    <BrowserRouter>
+    <BrowserRouter basename='/good-cause-finder'>
       <div className="App">
         <Navbar />
         <div className="content">

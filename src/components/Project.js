@@ -7,7 +7,7 @@ const Project = () => {
   const { id } = useParams()
 
   // Get the data about the project
-  const { data, error } = useFetch(`http://localhost:5080/projects/${id}`)
+  const { data, error } = useFetch(`https://cscloud7-221.lnu.se/good-cause-finder-server/projects/${id}`)
 
   console.log(data)
 
