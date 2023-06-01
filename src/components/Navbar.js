@@ -27,9 +27,6 @@ const Navbar = () => {
             <NavLink to={"/"} text={"Hem"} />
             <NavLink to={"/projects"} text={"Projekt"} />
             <NavLink to={"/about"} text={"Om oss"} />
-            {/* <Link className="nav-link color-1 active" aria-current="page" to="/">Home</Link> */}
-            {/* <Link className="nav-link color-1" to="/filter">Filter projects</Link> */}
-            {/* <Link className="nav-link color-1" to="/about">About </Link> */}
           </div>
         </div>
       </div>
