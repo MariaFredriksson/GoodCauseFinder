@@ -2,6 +2,11 @@
 import { Link } from 'react-router-dom'
 import NavLink from './NavLink'
 
+/**
+ * Represents the navbar component.
+ *
+ * @returns {JSX.Element} The JSX element representing the navbar component.
+ */
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-md sticky-top color-1 bg-body-tertiary">

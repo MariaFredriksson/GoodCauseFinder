@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react"
 
+/**
+ * Custom hook for fetching data from an API.
+ *
+ * @param {string} url - The URL of the API endpoint.
+ * @returns {Object} An object containing the fetched data and error state.
+ * @property {any} data - The fetched data.
+ * @property {string|null} error - The error message, if any.
+ */
 const useFetch = (url) => {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)

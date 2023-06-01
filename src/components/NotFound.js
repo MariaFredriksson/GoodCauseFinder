@@ -1,6 +1,11 @@
 import Button from "./Button"
 import GiveLoveIcon from "./../assets/give-love.png"
 
+/**
+ * Represents the not found component.
+ *
+ * @returns {JSX.Element} The JSX element representing the not found component.
+ */
 const NotFound = () => {
   return (
     <div>

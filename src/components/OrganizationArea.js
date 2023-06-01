@@ -1,5 +1,10 @@
 import OrganizationTile from "./OrganizationTile"
 
+/**
+ * Represents the organization area component.
+ *
+ * @returns {JSX.Element} The JSX element representing the organization area component.
+ */
 const OrganizationArea = () => {
   return (
     <div className="container">

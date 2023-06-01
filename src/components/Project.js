@@ -2,6 +2,11 @@ import { useParams } from "react-router-dom"
 import Button from "./Button"
 import useFetch from "./useFetch"
 
+/**
+ * Represents the project component.
+ *
+ * @returns {JSX.Element} The JSX element representing the project component.
+ */
 const Project = () => {
   // Allows us to get the parameter from the route (and here we want to get the parameter that we named id)
   const { id } = useParams()

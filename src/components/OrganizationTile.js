@@ -2,6 +2,13 @@ import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"
 import GiveLoveIcon from "./../assets/give-love.png"
 
+/**
+ * Represents an organization tile component.
+ *
+ * @param {Object} props - The component props.
+ * @param {number} props.id - The ID of the organization.
+ * @returns {JSX.Element} The JSX element representing the organization tile.
+ */
 const OrganizationTile = ({ id }) => {
   return (
     <div className="organization-tile">

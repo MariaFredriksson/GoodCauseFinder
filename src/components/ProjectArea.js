@@ -3,6 +3,11 @@ import ProjectTile from "./ProjectTile"
 import useFetch from "./useFetch"
 import FilterButton from "./FilterButton"
 
+/**
+ * Represents the project area component.
+ *
+ * @returns {JSX.Element} The JSX element representing the project area component.
+ */
 const ProjectArea = () => {
   const [selectedCategory, setSelectedCategory] = useState(null)
   // Get the data about the projects

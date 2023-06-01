@@ -10,6 +10,11 @@ import Project from './components/Project'
 import OrganizationArea from './components/OrganizationArea'
 import Organization from './components/Organization'
 
+/**
+ * The main component that represents the entire application.
+ *
+ * @returns {JSX.Element} The JSX element representing the application.
+ */
 function App() {
   return (
     // The BrowserRouter component is used to wrap the entire app, so that the routes can be used in all components

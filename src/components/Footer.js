@@ -1,6 +1,11 @@
 
 import NavLink from "./NavLink"
 
+/**
+ * Represents the footer component.
+ *
+ * @returns {JSX.Element} The JSX element representing the footer component.
+ */
 const Footer = () => {
   return (
     <div className="footer color-1">

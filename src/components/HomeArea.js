@@ -1,6 +1,11 @@
 import Button from "./Button"
 import GiveLoveIcon from "./../assets/give-love.png"
 
+/**
+ * Represents the home area component.
+ *
+ * @returns {JSX.Element} The JSX element representing the home area.
+ */
 const HomeArea = () => {
   return (
     <div className="home">

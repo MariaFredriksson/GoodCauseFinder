@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"
 
+/**
+ * Represents the project area component.
+ *
+ * @returns {JSX.Element} The JSX element representing the project area component.
+ */
 const ProjectTile = ({ project }) => {
   // Truncate the text to a certain number of characters, and thereby limit the height of the tile
   const characterLimit = 150

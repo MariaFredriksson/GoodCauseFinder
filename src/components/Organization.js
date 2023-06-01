@@ -2,6 +2,11 @@ import { useParams } from "react-router-dom"
 import Button from "./Button"
 import GiveLoveIcon from "./../assets/give-love.png"
 
+/**
+ * Represents the organization component.
+ *
+ * @returns {JSX.Element} The JSX element representing the organization component.
+ */
 const Organization = () => {
   // Allows us to get the parameter from the route (and here we want to get the parameter that we named id)
   const { id } = useParams()
