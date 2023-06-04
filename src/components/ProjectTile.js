@@ -18,7 +18,7 @@ const ProjectTile = ({ project }) => {
           <div className="card">
             <img src={project.imgURL} className="card-img-top" alt={project.title} />
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title tile-header">{project.title}</h5>
+              <h5 className="card-title link-underline">{project.title}</h5>
                 <p className="card-text flex-grow-1 overflow-hidden">
                   {truncatedText}
                   {/* Show ... if the text exceeds the character limit */}

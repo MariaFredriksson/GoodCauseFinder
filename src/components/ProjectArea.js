@@ -34,7 +34,7 @@ const ProjectArea = () => {
 
   return (
     <div className="container">
-      <h2>Filtrera projekt</h2>
+      <h2 className="text-color-1 mt-4">Filtrera projekt</h2>
       <div className="mb-4 d-flex flex-wrap">
         <FilterButton
           onClick={() => handleCategoryFilter(null)}

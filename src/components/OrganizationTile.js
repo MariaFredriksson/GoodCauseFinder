@@ -20,7 +20,7 @@ const OrganizationTile = ({ id }) => {
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <h5 className="card-title tile-header">Organization {id}</h5>
+                <h5 className="card-title link-underline">Organization {id}</h5>
                 <p className="card-text">Organization description {id} - This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <p className="card-text"><small className="text-body-secondary">Something else {id}</small></p>
               </div>

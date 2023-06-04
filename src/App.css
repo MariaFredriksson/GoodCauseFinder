@@ -25,6 +25,10 @@
   /* color: #5D2E5F !important; */
 }
 
+.text-color-1 {
+  color: #5D2E5F !important;
+}
+
 .App {
   display: grid;
 }
@@ -96,7 +100,7 @@
   display: grid;
 }
 
-.tile-header:hover {
+.link-underline:hover {
   /* color: black !important; */
   /* When hovering over the text, add underline */
   text-decoration: underline !important;

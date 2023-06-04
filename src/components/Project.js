@@ -37,9 +37,9 @@ const Project = () => {
         {/* If there is an error, display an error message */}
         {error && <p>Oups... Något gick fel... Försök igen senare.</p>}
   
-        {data && <h2>{data.title}</h2>}
+        {data && <h2 className="text-color-1 mb-4">{data.title}</h2>}
   
-        {data && <img src={data.imgURL} alt="Give love" />}
+        {data && <img src={data.imgURL} alt="Projekt-bild" className="img-fluid rounded" />}
   
         {data && <p>{data.organization}</p>}
   

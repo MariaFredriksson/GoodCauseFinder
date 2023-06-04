@@ -14,7 +14,7 @@ const Organization = () => {
   return (
     <div>
       <div className="container">
-        <img src={GiveLoveIcon} alt="Give love" className="organization-logo my-4" />
+        <img src={GiveLoveIcon} alt="Give love" className="organization-logo my-4 img-fluid" />
 
         <h2>Organization {id}</h2>
 
