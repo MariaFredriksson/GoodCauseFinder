@@ -45,7 +45,7 @@ const Project = () => {
   
         {data && <div>{data.text}</div>}
   
-        {data && <Button link={data.articleURL} text={"Support this project"} />}
+        {data && <Button link={data.articleURL} text={"Stötta detta projekt"} />}
       </div>
 
     </div>
