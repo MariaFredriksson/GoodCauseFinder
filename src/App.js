@@ -9,6 +9,7 @@ import NotFound from './components/NotFound'
 import Project from './components/Project'
 import OrganizationArea from './components/OrganizationArea'
 import Organization from './components/Organization'
+import About from './components/About'
 
 /**
  * The main component that represents the entire application.
@@ -33,6 +34,8 @@ function App() {
             <Route path="/organizations" element={<OrganizationArea />} />
 
             <Route path="/organizations/:id" element={<Organization />} />
+
+            <Route path="/about" element={<About />} />
               
             {/* If the route is not found, we can redirect the user to the not found page */}
             {/* This matches any other route that is note one of the before ones - a catch all route */}
