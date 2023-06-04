@@ -74,10 +74,12 @@
 
 .hero-text {
   text-shadow: white 0 0 15px;
+  /* background-color: rgba(255, 255, 255, 0.24); */
 }
 
 .stupid-div {
   color: transparent;
+  height: 7vh;
 }
 
 .footer {

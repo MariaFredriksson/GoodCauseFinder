@@ -19,7 +19,7 @@ const HomeArea = () => {
             <img className="d-block mx-auto mb-4" src={GiveLoveIcon} alt="" width="72" />
               <h1 className="display-5 fw-bold text-body-emphasis">Dina hjärtefrågor gör skillnad!</h1>
               <div className="col-lg-6 mx-auto">
-              <p className="lead mb-4">Tillsammans förändrar vi världen! Utforska Good Cause Finder och ge kraft åt dina hjärtefrågor. Hitta biståndsprojekt som betyder något för dig, klicka och ge en gåva. Var med och skapa en bättre framtid - varje handling räknas!</p>
+              <p className="lead fw-normal mb-4">Tillsammans förändrar vi världen! Utforska Good Cause Finder och ge kraft åt dina hjärtefrågor. Hitta biståndsprojekt som betyder något för dig, klicka och ge en gåva. Var med och skapa en bättre framtid - varje handling räknas!</p>
                 <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <Button link={"/projects"} text={"Gör skillnad!"} />
                 </div>
